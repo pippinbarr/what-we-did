@@ -54,19 +54,24 @@ class RegretState extends WWDState
 		add(personHungUp);
 
 		dialAndAnswer = new FlxSound();
+		hangUp = new FlxSound();
+		crickets = new FlxSound();
+
+		#if html5
 		dialAndAnswer.loadEmbedded(AssetPaths.regret_phone_ring_and_message__mp3, false);
+		hangUp.loadEmbedded(AssetPaths.regret_hang_up__mp3, false);
+		crickets.loadEmbedded(AssetPaths.regret_crickets__mp3, true);
+		#else
+		dialAndAnswer.loadEmbedded(AssetPaths.regret_phone_ring_and_message__ogg, false);
+		hangUp.loadEmbedded(AssetPaths.regret_hang_up__ogg, false);
+		crickets.loadEmbedded(AssetPaths.regret_crickets__ogg, true);
+		#end
 
 		disconnectClick = new FlxSound();
 		disconnectClick.loadEmbedded(AssetPaths.regret_click__wav, false);
 
 		disconnected = new FlxSound();
 		disconnected.loadEmbedded(AssetPaths.regret_disconnected__wav, true);
-
-		hangUp = new FlxSound();
-		hangUp.loadEmbedded(AssetPaths.regret_hang_up__mp3, false);
-
-		crickets = new FlxSound();
-		crickets.loadEmbedded(AssetPaths.regret_crickets__mp3, true);
 
 		sounds.add(dialAndAnswer);
 		sounds.add(disconnectClick);

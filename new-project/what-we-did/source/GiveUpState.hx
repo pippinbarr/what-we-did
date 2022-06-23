@@ -43,15 +43,21 @@ class GiveUpState extends WWDState
 		add(flash);
 
 		shot1 = new FlxSound();
-		shot1.loadEmbedded(AssetPaths.give_up_gunshot__mp3, false);
-		shot1.volume = 0.6;
-
 		shot2 = new FlxSound();
-		shot2.loadEmbedded(AssetPaths.give_up_gunshot__mp3, false);
-		shot2.volume = 0.6;
-
 		bgSound = new FlxSound();
+
+		#if html5
+		shot1.loadEmbedded(AssetPaths.give_up_gunshot__mp3, false);
+		shot2.loadEmbedded(AssetPaths.give_up_gunshot__mp3, false);
 		bgSound.loadEmbedded(AssetPaths.give_up_bg__mp3, true);
+		#else
+		shot1.loadEmbedded(AssetPaths.give_up_gunshot__ogg, false);
+		shot2.loadEmbedded(AssetPaths.give_up_gunshot__ogg, false);
+		bgSound.loadEmbedded(AssetPaths.give_up_bg__ogg, true);
+		#end
+
+		shot1.volume = 0.6;
+		shot2.volume = 0.6;
 		bgSound.play();
 
 		sounds.add(shot1);

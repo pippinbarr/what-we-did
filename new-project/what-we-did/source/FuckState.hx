@@ -68,10 +68,18 @@ class FuckState extends WWDState
 		add(lights);
 
 		manSounds = new Array();
+		#if html5
 		manSounds.push(new FlxSound().loadEmbedded(AssetPaths.fuck_man_1__mp3, false));
 		manSounds.push(new FlxSound().loadEmbedded(AssetPaths.fuck_man_2__mp3, false));
 		manSounds.push(new FlxSound().loadEmbedded(AssetPaths.fuck_man_3__mp3, false));
 		manSounds.push(new FlxSound().loadEmbedded(AssetPaths.fuck_man_4__mp3, false));
+		#else
+		manSounds.push(new FlxSound().loadEmbedded(AssetPaths.fuck_man_1__ogg, false));
+		manSounds.push(new FlxSound().loadEmbedded(AssetPaths.fuck_man_2__ogg, false));
+		manSounds.push(new FlxSound().loadEmbedded(AssetPaths.fuck_man_3__ogg, false));
+		manSounds.push(new FlxSound().loadEmbedded(AssetPaths.fuck_man_4__ogg, false));
+		#end
+
 		manSounds.sort(Helpers.randomSort);
 		manTimer = new FlxTimer().start();
 		manTimer.finished = true;
@@ -80,10 +88,18 @@ class FuckState extends WWDState
 			sounds.add(manSounds[i]);
 
 		womanSounds = new Array();
+
+		#if html5
 		womanSounds.push(new FlxSound().loadEmbedded(AssetPaths.fuck_woman_1__mp3, false));
 		womanSounds.push(new FlxSound().loadEmbedded(AssetPaths.fuck_woman_2__mp3, false));
 		womanSounds.push(new FlxSound().loadEmbedded(AssetPaths.fuck_woman_3__mp3, false));
 		womanSounds.push(new FlxSound().loadEmbedded(AssetPaths.fuck_woman_4__mp3, false));
+		#else
+		womanSounds.push(new FlxSound().loadEmbedded(AssetPaths.fuck_woman_1__ogg, false));
+		womanSounds.push(new FlxSound().loadEmbedded(AssetPaths.fuck_woman_2__ogg, false));
+		womanSounds.push(new FlxSound().loadEmbedded(AssetPaths.fuck_woman_3__ogg, false));
+		womanSounds.push(new FlxSound().loadEmbedded(AssetPaths.fuck_woman_4__ogg, false));
+		#end
 		womanSounds.sort(Helpers.randomSort);
 		womanTimer = new FlxTimer().start();
 		womanTimer.finished = true;
@@ -91,7 +107,11 @@ class FuckState extends WWDState
 		for (i in 0...womanSounds.length)
 			sounds.add(womanSounds[i]);
 
+		#if html5
 		bgSound = new FlxSound().loadEmbedded(AssetPaths.fuck_bg__mp3, true);
+		#else
+		bgSound = new FlxSound().loadEmbedded(AssetPaths.fuck_bg__ogg, true);
+		#end
 		bgSound.play();
 		sounds.add(bgSound);
 

@@ -226,7 +226,7 @@ class MenuState extends FlxState
 
 			// trace("Setting carmenText to " + carmenString);
 			carmenText = new FlxText(0, FlxG.height / 2 - 28, FlxG.width, carmenString);
-			carmenText.setFormat("Courier", 28, 0xFFFFFFFF, "center");
+			carmenText.setFormat(AssetPaths.CourierNew__ttf, 28, 0xFFFFFFFF, "center");
 			add(carmenText);
 
 			// trace("Stopping FX and fading in");
@@ -244,7 +244,7 @@ class MenuState extends FlxState
 
 		// trace("Creating optionText for the we x thing");
 		optionText = new FlxText(0, FlxG.height / 2 - 28, FlxG.width, "");
-		optionText.setFormat("Courier", 28, 0xFFFFFFFF, "center");
+		optionText.setFormat(AssetPaths.CourierNew__ttf, 28, 0xFFFFFFFF, "center");
 		add(optionText);
 		optionText.visible = false;
 

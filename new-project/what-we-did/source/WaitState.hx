@@ -41,8 +41,17 @@ class WaitState extends WWDState
 		add(bg);
 		add(car);
 
-		folk = new FlxSound().loadEmbedded(AssetPaths.wait_folk__mp3, false);
-		reich = new FlxSound().loadEmbedded(AssetPaths.wait_reich__mp3, false);
+		folk = new FlxSound();
+		reich = new FlxSound();
+
+		#if html5
+		folk.loadEmbedded(AssetPaths.wait_folk__mp3, false);
+		reich.loadEmbedded(AssetPaths.wait_reich__mp3, false);
+		#else
+		folk.loadEmbedded(AssetPaths.wait_folk__ogg, false);
+		reich.loadEmbedded(AssetPaths.wait_reich__ogg, false);
+		#end
+
 		statics = new FlxSound().loadEmbedded(AssetPaths.wait_static__wav, true);
 		extraStatics = new Array();
 		for (i in 0...10)

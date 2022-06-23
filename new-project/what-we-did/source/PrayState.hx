@@ -46,41 +46,45 @@ class PrayState extends WWDState
 		add(church);
 
 		bgSound = new FlxSound();
+		#if html5
 		bgSound.loadEmbedded(AssetPaths.pray_bg__mp3, true);
+		#else
+		bgSound.loadEmbedded(AssetPaths.pray_bg__ogg, true);
+		#end
 		bgSound.play();
 
 		sounds.add(bgSound);
 
 		wNote = new FlxSound();
-		wNote.loadEmbedded(AssetPaths.D1__mp3, false);
+		wNote.loadEmbedded(AssetPaths.D1__wav, false);
 		sounds.add(wNote);
 
 		aNote = new FlxSound();
-		aNote.loadEmbedded(AssetPaths.D0__mp3, false);
+		aNote.loadEmbedded(AssetPaths.D0__wav, false);
 		sounds.add(aNote);
 
 		sNote = new FlxSound();
-		sNote.loadEmbedded(AssetPaths.F0__mp3, false);
+		sNote.loadEmbedded(AssetPaths.F0__wav, false);
 		sounds.add(sNote);
 
 		dNote = new FlxSound();
-		dNote.loadEmbedded(AssetPaths.A1__mp3, false);
+		dNote.loadEmbedded(AssetPaths.A1__wav, false);
 		sounds.add(dNote);
 
 		upNote = new FlxSound();
-		upNote.loadEmbedded(AssetPaths.C1__mp3, false);
+		upNote.loadEmbedded(AssetPaths.C1__wav, false);
 		sounds.add(upNote);
 
 		leftNote = new FlxSound();
-		leftNote.loadEmbedded(AssetPaths.E0__mp3, false);
+		leftNote.loadEmbedded(AssetPaths.E0__wav, false);
 		sounds.add(leftNote);
 
 		downNote = new FlxSound();
-		downNote.loadEmbedded(AssetPaths.G0__mp3, false);
+		downNote.loadEmbedded(AssetPaths.G0__wav, false);
 		sounds.add(downNote);
 
 		rightNote = new FlxSound();
-		rightNote.loadEmbedded(AssetPaths.B1__mp3, false);
+		rightNote.loadEmbedded(AssetPaths.B1__wav, false);
 		sounds.add(rightNote);
 	}
 

@@ -17,20 +17,21 @@ class TitleState extends FlxState
 
 		FlxG.camera.bgColor = 0xFF000000;
 
-		title = new FlxText(0, 0, 207, "1. They know");
-		title.setFormat("Courier", 28, 0xFFFFFFFF, "left");
+		title = new FlxText(0, 0, -1, "1. They know");
+		title.setFormat(AssetPaths.CourierNew__ttf, 28, 0xFFFFFFFF, "left");
+		// title.setFormat("Courier New", 28, 0xFFFFFFFF, "left");
 		title.y = FlxG.height / 2 - title.height;
 
 		add(title);
 
-		var title2:FlxText = new FlxText(title.x + title.width + 12, title.y, 190, "what we did");
-		title2.setFormat("Courier", 28, 0xFfffffff, "left");
+		var title2:FlxText = new FlxText(title.x + title.width + 12, title.y, -1, "what we did");
+		title2.setFormat(AssetPaths.CourierNew__ttf, 28, 0xFfffffff, "left");
 		title2.y = FlxG.height / 2 - title2.height;
 
 		add(title2);
 
-		title3 = new FlxText(title2.x + title2.width, title.y, 14, ".");
-		title3.setFormat("Courier", 28, 0xFfffffff, "left");
+		title3 = new FlxText(title2.x + title2.width, title.y, -1, ".");
+		title3.setFormat(AssetPaths.CourierNew__ttf, 28, 0xFfffffff, "left");
 		title3.y = FlxG.height / 2 - title3.height;
 
 		add(title3);

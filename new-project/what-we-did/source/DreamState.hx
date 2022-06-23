@@ -4,6 +4,7 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.math.FlxMath;
+import flixel.system.FlxAssets;
 import flixel.system.FlxSound;
 import flixel.text.FlxText;
 import flixel.ui.FlxButton;
@@ -35,7 +36,11 @@ class DreamState extends WWDState
 		loadDreamSprites();
 
 		dreamSound = new FlxSound();
+		#if html5
 		dreamSound.loadEmbedded(AssetPaths.dream_bg__mp3, true);
+		#else
+		dreamSound.loadEmbedded(AssetPaths.dream_bg__ogg, true);
+		#end
 		sounds.add(dreamSound);
 
 		startDreaming();
