@@ -3,8 +3,8 @@
 ![Banner](images/what-we-did-banner.png)
 
 ## [Play Online](https://www.pippinbarr.com/what-we-did/web/) (HTML5, not mobile-friendly)
-## ~~[Download for Mac](https://github.com/pippinbarr/what-we-did/releases/tag/mac)~~
-## ~~[Download for Windows](https://github.com/pippinbarr/what-we-did/releases/tag/windows)~~
+## [Download for Mac](https://github.com/pippinbarr/what-we-did/releases/tag/mac)
+## [Download for Windows](https://github.com/pippinbarr/what-we-did/releases/tag/windows)
 
 ## Description
 *They know what we did. What do we do now?*
